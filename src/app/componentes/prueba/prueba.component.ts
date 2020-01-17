@@ -19,4 +19,8 @@ export class PruebaComponent implements OnInit {
 
   }
 
+  ngOnClick(){
+    
+  }
+
 }

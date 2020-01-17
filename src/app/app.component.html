@@ -69,8 +69,7 @@
                   <div class="card " style="width: 18rem;">
                     <ul class="list-group list-group-flush">
                       <li *ngFor="let p of productos" (click)="seleccionarProducto($event, p)" class="list-group-item {{(p==pSeleccionado) ? 'active' : ''}}">{{p.nombre}}</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
+
                     </ul>
                     <span></span>
                     <span *ngIf="!pSeleccionado.gluten" class="badge badge-pill badge-danger"></span>
