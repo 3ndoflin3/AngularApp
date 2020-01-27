@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PruebaComponent } from './componentes/prueba/prueba.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ArraysComponent } from './paginas/arrays/arrays.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent
+    PruebaComponent,
+    ArraysComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
