@@ -32,8 +32,8 @@ export class PokemonRestComponent implements OnInit {
   this.pokemonService.getPokemon('pikachu').subscribe(
     data =>  {
       console.debug('peticion correcta data %o', data);
-
-      //mapear de JSON a Pokemon
+      //mapear de JSON a Pokemon usar solo los datos de la clase Pokemon
+      
     },
     error =>  {
       console.debug('peticion erronea %o', error);
@@ -41,7 +41,7 @@ export class PokemonRestComponent implements OnInit {
     },
     () =>  {
       console.trace('Esto se hace 100pre');
-      
+
     }
 
   );
