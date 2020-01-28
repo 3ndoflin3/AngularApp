@@ -3,13 +3,20 @@
 <div class="row">
 
     <div class="col">
-        <pre>
-            {{frutas | json}}
+        <pre id ="pre">
+            
         </pre>
     </div>
     <!-- Calcular el total del precio de todas las frutas -->
     <div class="col">
-        <p>TODO total precios</p>
+        <p id="total">Precio total sin descuento: {{total}}</p>
+        <p id="total">Precio total con descuento: {{totalDescuento}}</p>
+        <p>solo nombres frutas: {{aSoloNombres}}</p>
+        <p>Frutas con descuento: {{frutasConDescuento}}</p>
+        <p>Nombre de las frutas amarillas: {{frutasAmarillas}} </p>
+        <p>Precio total de las amarillas: {{frutasAmarillasPrecioTotal}} </p>
+        <p>Buscar 1ª fruta verde: {{frutaVerde.nombre}} </p>
+        <p>Array Colores: {{arrayColores.nombre}}</p>
     </div>
 
 </div>

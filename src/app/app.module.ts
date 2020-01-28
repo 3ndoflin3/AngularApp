@@ -7,12 +7,14 @@ import { PruebaComponent } from './componentes/prueba/prueba.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 @NgModule({
   declarations: [
     AppComponent,
     PruebaComponent,
     ArraysComponent,
-    NavbarComponent
+    NavbarComponent,
+    PokemonRestComponent
   ],
   imports: [
     BrowserModule,
