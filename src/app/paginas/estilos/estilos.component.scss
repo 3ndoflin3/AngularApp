@@ -1,0 +1,56 @@
+
+// soporta comentarios de linea, los cuales luego no se ven en .CSS
+
+$color_purple : #FF00FF;
+$color_green : #00FF00;
+
+h1{
+    color: $color_purple;
+}
+
+//Nesting 
+p{
+    code{
+        color:$color_green;
+        background-color: #000;
+
+    }
+}
+
+//mixins o funciones para reutilziar
+@mixin redondear($radio, $color) {
+    border-radius: $radio;
+    border: 1px solid $color;
+    padding: 10px;
+}
+
+@mixin boton(){
+    display: inline-block;
+    border-radius: 30%;
+    top: 40%;
+}
+
+@mixin boton-rojo(){
+    @include boton(); 
+    background-color:red;
+}
+
+.borde10{
+    @include redondear(10%, $color_purple);
+}
+
+.borde50{
+    @include redondear(50%, #FF0000);
+}
+.boton-rojo{
+    @include boton-rojo(); 
+}
+
+%boton-basico {
+    /*border, padding, color , redondear
+    */
+    &:hover{
+        background-color: pink;
+    }
+}
+

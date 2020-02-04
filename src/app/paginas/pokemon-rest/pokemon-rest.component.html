@@ -1,3 +1,12 @@
 <p>pokemon-rest works!</p>
-<p>{{pokemon.nombre}}</p>
+<p>{{pokemon || json}}</p>
 <!-- <img src=`{{pokemon.imagen}}` alt=""> -->
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{pokemon.imagen}}" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">{{pokemon.id}} {{pokemon.nombre}}</p>
+      <p class="card-text">La habilidad del Pokemon es: {{pokemon.habilidad}}</p>
+      <p class="card-text">URL habilidad: {{pokemon.url}}</p>
+      <p class ="card-text">{{mensaje.name }}</p>
+    </div>
+  </div>

@@ -3,12 +3,15 @@ export class Pokemon {
     private _id: number;
     private _nombre: string;
     private _imagen: string;
-            
+    private _habilidad: string;        
+    private _url: string;
+    
     
     constructor( _nombre: string){
         this._id = 0;
         this._nombre = _nombre;
         this._imagen = 'https://pbs.twimg.com/media/DrhSSbNVAAALbRu.jpg';
+        this._habilidad = '';
     }
 
 
@@ -36,5 +39,16 @@ export class Pokemon {
     this._imagen = value;
     }
 
-
+    public get habilidad(): string {
+        return this._habilidad;
+    }
+    public set habilidad(value: string) {
+        this._habilidad = value;
+    }
+    public get url(): string {
+        return this._url;
+    }
+    public set url(value: string) {
+        this._url = value;
+    }
 }

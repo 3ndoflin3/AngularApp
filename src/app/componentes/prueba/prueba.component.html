@@ -1,1 +1,25 @@
 <p>prueba works!</p>
+
+<button (click)="contarClicks()">dale</button>
+<p>{{numeroClicks}}</p>
+
+<p>Ejemplo de propiedad siempre con [] y las variables sin llaves</p>
+<p>La propiedad hidden es de Angular y tambien podriamos haber usado el <code>*ngIf</code> </p>
+
+
+<p *ngIf="visible">Adios</p>
+<p [hidden]="!visible">Adios</p>
+<button (click)="decirAdios()">Decir adeu :c</button>
+
+<hr>
+
+<div [class]="claseSeleccionada">
+    COLOR que cambia al pulsar botones
+</div>
+
+<button (click)="claseSeleccionada='rojo'">Color rojo</button>
+<button (click)="claseSeleccionada='verde'">Color verde</button>
+
+<p>Para usar banana in the box recordar importar el modulo de <code>FormsModule</code></p>
+<label>Nombre: {{jugador}}</label>
+<input type="text" name="" id="" value="{{jugador}}">

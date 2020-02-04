@@ -10,13 +10,15 @@ import { PokemonService } from 'src/app/services/pokemon.service';
 export class PokemonRestComponent implements OnInit {
 
   pokemon: Pokemon;
+  mensaje: string;
 
   constructor(private pokemonService: PokemonService) { 
     console.trace('PokemonRestComponent');
+    this.mensaje = '';
     this.pokemon = new Pokemon('pikachu');
     //this.pokemon.nombre = 'pikachu'; SETTER
     this.pokemon.imagen = 'https://pbs.twimg.com/media/DrhSSbNVAAALbRu.jpg';
-    this.pokemon.id = 2;
+
 
     console.debug(this.pokemon);
   }
@@ -29,23 +31,53 @@ export class PokemonRestComponent implements OnInit {
   // cuando llamamos a un Observable tenemos 3 posibles metodos
   // solo 1 cuanto es obligatorio
 
-  this.pokemonService.getPokemon('pikachu').subscribe(
+  this.pokemonService.getPokemon('charizard').subscribe(
     data =>  {
       console.debug('peticion correcta data %o', data);
+      this.pokemon.id = data.id;
+      this.pokemon.nombre = data.name;
+      this.pokemon.imagen = data.sprites.front_default;
+      //this.pokemon.habilidad = data.abilities[0].ability.name;
+      this.pokemon.habilidad = data.abilities[0].ability.name;
+      this.pokemon.url = data.abilities[0].ability.url;
       //mapear de JSON a Pokemon usar solo los datos de la clase Pokemon
+
+      this.pokemonService.getHabilidad( data.abilities[0].ability.url).subscribe(
+        data =>  {
+          this.mensaje = data.names.find( el => el.language.name === 'es');
+          console.debug('peticion suksesful %o', data);
+          console.log(this.mensaje);
+          const habilidadesNames = data.abilities.map( el => el.ability.name);
+          console.debug('Habilidades %o', habilidadesNames);
+          //mapear de JSON a Pokemon usar solo los datos de la clase Pokemon
+          
+        },
+        error =>  {
+          this.mensaje = 'No existe el pokemon X';
+          console.debug('peticion erronea %o', error);
+    
+        },
+        () =>  {
+          console.trace('Esto se hace 100pre');
+        }
+      );
       
     },
     error =>  {
+      this.mensaje = 'No existe el pokemon X';
       console.debug('peticion erronea %o', error);
 
     },
     () =>  {
-      console.trace('Esto se hace 100pre');
 
+      console.trace('Esto se hace 100pre');
+      
     }
 
   );
 
+
+    
   }
 
 }
