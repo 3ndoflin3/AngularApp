@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-prueba',
   templateUrl: './prueba.component.html',
@@ -15,7 +17,7 @@ export class PruebaComponent implements OnInit {
   constructor() {
   console.trace('BotonComponent constructor');
     this.visible = false;
-    this.jugador = "Diego Armando Cocainona";
+    this.jugador = "escribe";
     this.numeroClicks = 0;
     this.numero = 0;
    }// constructor

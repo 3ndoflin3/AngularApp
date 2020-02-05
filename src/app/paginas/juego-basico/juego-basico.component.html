@@ -1,0 +1,23 @@
+<p>juego-basico works!</p>
+
+<br><br>
+
+<label >Tu nombre: {{jugador}}</label>
+<input type="text" name="" id="" [(ngModel)]="jugador">
+
+<hr>
+
+<button (click)="iniciar(this)">Iniciar</button>
+
+<button [disabled]="!activado" (click)="contarClicks()">dale</button>
+<p>{{numeroClicks}}</p>
+
+<hr>
+
+
+<ul class="list-group">
+    <li *ngFor="let j of ranking | keyvalue" class ="list-group-item"> <b>{{j.keyvalue}}</b> {{j.value}}</li>
+</ul>
+
+
+

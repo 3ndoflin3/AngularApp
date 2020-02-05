@@ -9,7 +9,12 @@ import { ArraysComponent } from './paginas/arrays/arrays.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { EstilosComponent } from './paginas/estilos/estilos.component';
-import { JuegoBasicoComponent } from './componentes/juego-basico/juego-basico.component';
+import { JuegoBasicoComponent } from './paginas/juego-basico/juego-basico.component';
+import { DirectivasComponent } from './paginas/directivas/directivas.component';
+import { FiltrosComponent } from './paginas/filtros/filtros.component';
+import { HelloDirective } from './directives/hello.directive';
+import { SubrayarDirective } from './directives/subrayar.directive';
+import { AnimalesPipe } from './pipes/animales.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +23,12 @@ import { JuegoBasicoComponent } from './componentes/juego-basico/juego-basico.co
     NavbarComponent,
     PokemonRestComponent,
     EstilosComponent,
-    JuegoBasicoComponent
+    JuegoBasicoComponent,
+    DirectivasComponent,
+    FiltrosComponent,
+    HelloDirective,
+    SubrayarDirective,
+    AnimalesPipe
   ],
   imports: [
     BrowserModule,

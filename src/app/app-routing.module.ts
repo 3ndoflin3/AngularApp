@@ -4,7 +4,10 @@ import {PruebaComponent} from './componentes/prueba/prueba.component';
 import {ArraysComponent} from './paginas/arrays/arrays.component';
 import { PokemonRestComponent } from './paginas/pokemon-rest/pokemon-rest.component';
 import { EstilosComponent } from './paginas/estilos/estilos.component';
-import { JuegoBasicoComponent } from './componentes/juego-basico/juego-basico.component';
+import { JuegoBasicoComponent } from './paginas/juego-basico/juego-basico.component';
+import { DirectivasComponent } from './paginas/directivas/directivas.component';
+import { FiltrosComponent } from './paginas/filtros/filtros.component';
+
 
 /**
  * Definir las rutas de la app de angular
@@ -17,8 +20,9 @@ const routes: Routes = [
   {path: 'juego', component: ArraysComponent},
   {path: 'pokemon', component: PokemonRestComponent},
   {path: 'estilos', component: EstilosComponent},
-  {path: 'juego-basico', component: JuegoBasicoComponent}
-
+  {path: 'juego-basico', component: JuegoBasicoComponent},
+  {path: 'directivas', component: DirectivasComponent},
+  {path: 'filtros', component:FiltrosComponent}
 ];
 
 @NgModule({

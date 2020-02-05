@@ -1,0 +1,30 @@
+<h2>{{'Pipes o Filtros' | uppercase}}</h2>
+<h3>Ejemplos de Filtros de Angular</h3>
+
+<a href="https://angular.io/api?type=pipe" target="_blank">API de Filtros</a>
+
+<hr>
+
+<h3>Custom Filter</h3>
+<a href="https://angular.io/guide/pipes" target="_blank">Documentacion Oficial</a>
+<pre>{{coche|json}}</pre>
+<pre>{{coche.nombre}}</pre>
+<pre>{{coche.precio | currency:'EUR'}}</pre>
+<p class="text-warning">TODO Buscar como poner el idioma local </p>
+
+
+<hr>
+
+<input type="search" name="" id="" [(ngModel)]="busqueda">
+<h3>Filtrando Listas</h3>
+<ul class="list-group">
+    <!-- Da error por animalesFiltro ya que no lo encuentra -->
+    <li *ngFor="let animal of animales | animales : busqueda " class="list-group-item">
+         <img src="{{animal.Imagen}}" class="avatar circle">
+        <div>
+            <p class="nombre">{{animal.Nombre}}</p>
+            <p class="observacion">{{animal.Observacion}}</p>
+        </div>    
+    </li>
+    
+  </ul>

@@ -1,0 +1,28 @@
+<h2>Directivas</h2>
+<p>Hay tres tipos de directivas en Angular: </p>
+
+<dl>
+    <dt>Components:</dt>
+    <dd>Son directivas con una plantilla HTML</dd>
+    
+    <dt>Estructurales:</dt>
+    <dd>cambian el DOM añdiendo o removiendo elementos, por jemplo *ngIf. </dd>
+    
+    <dt>Attribute directive</dt>
+    <dd>cambian la apariencia de un elemento del DOM, por ejemplo NgStyle.</dd>
+
+    <input type="radio" name="color" (click) ="colorSeleccionado='pink'">
+    <input type="radio" name="color" (click) ="colorSeleccionado='blue'">
+    <input type="radio" name="color" (click) ="colorSeleccionado='orange'">
+
+    <p appSubrayar ="green">Podemos crear nuestras directivas con el comando ng g d (ruta)</p>
+    <p appSubrayar ="'green'">Podemos crear nuestras directivas con el comando ng g d (ruta)</p>
+    <p appHello color="pink">En esta etiqueta estamos usando nuestra directiva <code>appHello</code>  </p>
+
+    <p> <input type="radio" name="" id=""></p>
+
+    <select name="" id="">
+        <option value=""></option>
+    </select>
+
+</dl>
