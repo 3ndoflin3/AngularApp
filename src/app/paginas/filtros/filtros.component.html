@@ -15,11 +15,14 @@
 
 <hr>
 
-<select [(ngModel)]="tipo">
-
-</select>
 
 <input type="search" name="" id="" [(ngModel)]="busqueda">
+
+<select [(ngModel)]="tipo">
+    <option selected>TODOS</option>
+    <option *ngFor="let t of tipos">{{t}}</option>
+</select>
+tipo seleccionado {{tipo}}
 <h3>Filtrando Listas</h3>
 <ul class="list-group">
     <!-- Da error por animalesFiltro ya que no lo encuentra -->
