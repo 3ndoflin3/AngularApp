@@ -1,11 +1,13 @@
 li{
     display: flex;
-    .observacion{
-
-    }
     .nombre{
-
+        font-size: 1.6rem;
     }
+    .observacion{
+        font-size: 1rem;
+        color: grey;
+    }
+
 
     .circle{
         width: 75px;
