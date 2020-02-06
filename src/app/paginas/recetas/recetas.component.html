@@ -1,1 +1,69 @@
-<p>recetas works!</p>
+
+<div class="row">
+    <div class="col">
+        <p>Cocinar nueva receta</p>
+    </div>
+    <div class="col">
+        <p>Recetas sin gluten</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+
+    </div>
+    <div class="col-4">
+        <input type="search" name="" id="">
+        <button>Buscar</button>
+    </div>
+    <div class="col-2">
+        
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-3">
+        <p>Recetario</p>
+        <ul class="list-group">
+            <li class="list-group-item {{(r==rSeleccionado)?'active':''}}" *ngFor="let r of recetas" (click)="seleccionarReceta(r)">{{r.nombre}}</li>
+        </ul>
+    </div>
+
+    <div class="col-9" style="border-left: 1px solid blue;">
+        <p style ="background-color: blue; color: white; height: 10%;">Marmitako</p>
+        <div class="row">
+            <div class="col-6">
+                <img src="https://pbs.twimg.com/media/DtB4gepX4AA_hRb.jpg" alt="" style="width: 70%; height: 50%;">
+            </div> <!-- COL IMAGE-->
+
+            <div class="col-6">
+                <ul class="list-group">
+                    <li class="list-group-item" >Cras justo odio </li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+            </div> <!-- COL LIST-->
+        </div> <!-- ROW INSIDE COL -->
+        
+        <div class="row">
+            <div class="col-6">
+                <p>Boton like</p>
+            </div>
+            <div class="col-6">
+                <p>By Cannibal Food</p>
+            </div>
+
+        </div> <!-- LIKE & AUTHOR ROW -->
+
+        <div class="row">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta voluptates quia saepe molestias sunt,
+                     laudantium id cumque veritatis consequuntur, numquam ipsa praesentium cum, ducimus debitis.
+                     Itaque voluptates quam vero.</p>
+            </div>
+        </div>
+    </div> <!-- CARD COL -->
+</div>
+<br><br><br><br><br><br>

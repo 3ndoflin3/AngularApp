@@ -7,6 +7,7 @@ import { EstilosComponent } from './paginas/estilos/estilos.component';
 import { JuegoBasicoComponent } from './paginas/juego-basico/juego-basico.component';
 import { DirectivasComponent } from './paginas/directivas/directivas.component';
 import { FiltrosComponent } from './paginas/filtros/filtros.component';
+import { RecetasComponent} from './paginas/recetas/recetas.component';
 
 
 /**
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'estilos', component: EstilosComponent},
   {path: 'juego-basico', component: JuegoBasicoComponent},
   {path: 'directivas', component: DirectivasComponent},
-  {path: 'filtros', component:FiltrosComponent}
+  {path: 'filtros', component:FiltrosComponent},
+  {path: 'recetas', component: RecetasComponent}
 ];
 
 @NgModule({
