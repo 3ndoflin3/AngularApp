@@ -11,11 +11,12 @@ export class RecetasComponent implements OnInit {
   rSeleccionado: Array<any>;
   constructor() { 
     console.log('Constructor Recetas');
+    this.recetas = RECETAS;
+    this.rSeleccionado = this.recetas[0];
   }
   
   ngOnInit() {
     console.log('On init Recetas');
-    this.recetas = RECETAS;
 
   }
 
