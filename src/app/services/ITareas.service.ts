@@ -17,6 +17,6 @@ export interface ITareasService{
 
     modificar(tarea: Tarea): Observable<Tarea>;
 
-    eliminar( id: number): Observable<Tarea>;
+    eliminar( tarea: Tarea): Observable<Tarea>;
 
 }

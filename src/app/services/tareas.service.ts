@@ -24,20 +24,18 @@ export class TareasService implements ITareasService{
     throw new Error("Method not implemented.");
   }
   crear(tarea: Tarea): Observable<any> {
-    throw new Error("Method not implemented.");
+    return this.http.post<Tarea>(url, tarea);
   }
   modificar(tarea: Tarea):Observable<any> {
-
-    console.debug('modificar %o', tarea);
-
-    return this.http.put(url, tarea);
+    const url_put = url + '/' + tarea.id;
+    console.debug('Put %s modificar %o', url_put, tarea);
+    return this.http.put<Tarea>(url_put, tarea);
   }
-  
-  eliminar(id: number): Observable<any> {
-    console.debug('DELETE %s', url);
 
-    return this.http.delete<Array<Tarea>>(url);
-
+  eliminar(tarea: Tarea): Observable<any> {
+    const url_delete = url + '/' + tarea.id;
+    console.debug('Put %s modificar %o', url_delete, tarea);
+    return this.http.delete<Tarea>(url_delete);
   }
 
 

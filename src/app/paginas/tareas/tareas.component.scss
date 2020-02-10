@@ -1,5 +1,7 @@
 li{
-
+    list-style: none;
+    color: teal;
+    font-size: larger;
     span.titulo{
         font-weight: 500;
         margin-left: 10px;
@@ -11,4 +13,25 @@ li{
         color: gray;
     }
 
+}
+
+.row{
+    background-image: url(https://media.giphy.com/media/26ufnwz3wDUli7GU0/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.col{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.card{
+    margin: auto;
+    width: 40%;
+    opacity: 0.8;
+    background-color: whitesmoke;
+    transform:  rotate(340deg);
+    top:20%;
+    border-radius: 10%;
 }

@@ -2,15 +2,31 @@
 
 <p>Ejemplo de Provider o Servicio para hacer un CRUD completo, contra un servicio Rest.</p>
 
-{{tareas | json}}
+<!-- {{tareas | json}} -->
+
+<div class="row">
+    
+    <div class="col">
+        <div class="card mt-2 align-items-center">
+            <div class="pt-3">
+                <input type="text" [(ngModel)] = "tituloNuevo" (focus)="focusIn()" (focusout)="focusOut()">
+                <button class="ml-3" (click)="nuevaTarea()">Crear</button>
+            </div>
+            
+            <ul class="pt-3">
+                <li *ngFor="let tarea of tareas" class="pt-3">
+                    <input type="checkbox" [checked]="tarea.completada" (click)="editarEstado(tarea)" >
+                    <b>{{tarea.id}}</b>   
+                    <span class="titulo {{(tarea.completada)?'completada':''}}" >{{tarea.titulo}}</span>
+                    <i class="fas fa-trash ml-3" (click) = eliminarTarea(tarea)></i>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 
-<ul>
-    <li *ngFor="let tarea of tareas">
-        <input type="checkbox" [checked]="tarea.completada" (click)="editarEstado(tarea)">
-        <b>{{tarea.id}}</b>   
-        {{tarea.completada}} 
-        <span class="titulo {{(tarea.completada)?'completada':''}}">{{tarea.titulo}}</span>
-        <button (click) = eliminarTarea()> Eliminar</button>
-    </li>
-</ul>
+   
+
+
+
+</div>

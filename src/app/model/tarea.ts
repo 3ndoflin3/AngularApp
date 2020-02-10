@@ -15,7 +15,7 @@ export class Tarea implements ITarea{
     completada: boolean;
 
     /* Importar el que tiene http 1 vez */
-    constructor(private http: HttpClient){
+    constructor(){
         console.trace('Tareas Constructor');
         this.id = 0;
         this.titulo = '';
