@@ -1,0 +1,16 @@
+<h2>tareas works!</h2>
+
+<p>Ejemplo de Provider o Servicio para hacer un CRUD completo, contra un servicio Rest.</p>
+
+{{tareas | json}}
+
+
+<ul>
+    <li *ngFor="let tarea of tareas">
+        <input type="checkbox" [checked]="tarea.completada" (click)="editarEstado(tarea)">
+        <b>{{tarea.id}}</b>   
+        {{tarea.completada}} 
+        <span class="titulo {{(tarea.completada)?'completada':''}}">{{tarea.titulo}}</span>
+        <button (click) = eliminarTarea()> Eliminar</button>
+    </li>
+</ul>

@@ -12,7 +12,6 @@ Sacar un listado y que cuando pinches le pasas el id y sacas el detalle del prod
 
   constructor() { 
     this.coches= [{
-
     }];
   }
 

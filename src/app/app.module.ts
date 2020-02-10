@@ -19,6 +19,7 @@ import { RecetasComponent } from './paginas/recetas/recetas.component';
 import { Error404Component } from './paginas/error404/error404.component';
 import { SaludarComponent } from './paginas/saludar/saludar.component';
 import { ComparadorComponent } from './paginas/comparador/comparador.component';
+import { TareasComponent } from './paginas/tareas/tareas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { ComparadorComponent } from './paginas/comparador/comparador.component';
     RecetasComponent,
     Error404Component,
     SaludarComponent,
-    ComparadorComponent
+    ComparadorComponent,
+    TareasComponent
   ],
   imports: [
     BrowserModule,

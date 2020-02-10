@@ -10,6 +10,7 @@ import { FiltrosComponent } from './paginas/filtros/filtros.component';
 import { RecetasComponent} from './paginas/recetas/recetas.component';
 import { Error404Component } from './paginas/error404/error404.component';
 import { SaludarComponent } from './paginas/saludar/saludar.component';
+import { TareasComponent } from './paginas/tareas/tareas.component';
 
 
 /**
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'directivas', component: DirectivasComponent},
   {path: 'filtros', component:FiltrosComponent},
   {path: 'recetas', component: RecetasComponent},
+  {path: 'tareas', component: TareasComponent},
   /* (:pNombre) los : sirven para indicar que es un parametro */
   {path: 'saludar/:pNombre', component: SaludarComponent},
   {path: '**', component: Error404Component}
