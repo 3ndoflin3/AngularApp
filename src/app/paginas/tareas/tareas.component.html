@@ -16,7 +16,8 @@
             <ul class="pt-3">
                 <li *ngFor="let tarea of tareas" class="pt-3">
                     <input type="checkbox" [checked]="tarea.completada" (click)="editarEstado(tarea)" >
-                    <b>{{tarea.id}}</b>   
+                    <b>{{tarea.id}}</b>
+                    <!-- Cambiar el span por un input text que parezca un span -->
                     <span class="titulo {{(tarea.completada)?'completada':''}}" >{{tarea.titulo}}</span>
                     <i class="fas fa-trash ml-3" (click) = eliminarTarea(tarea)></i>
                 </li>
