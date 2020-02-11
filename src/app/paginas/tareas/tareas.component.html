@@ -18,16 +18,15 @@
                     <input type="checkbox" [checked]="tarea.completada" (click)="editarEstado(tarea)" >
                     <b>{{tarea.id}}</b>
                     <!-- Cambiar el span por un input text que parezca un span -->
-                    <span class="titulo {{(tarea.completada)?'completada':''}}" >{{tarea.titulo}}</span>
+                    <input type="text" [(ngModel)]="tarea.titulo" 
+                       (blur)="cambiarTitulo(tarea); modoEdicion = false"
+                       [disabled]="!modoEdicion"
+                       class="titulo {{ (tarea.completada) ? 'completada' : '' }}" />
+                    <!-- <span class="titulo {{(tarea.completada)?'completada':''}}" >{{tarea.titulo}}</span> -->
                     <i class="fas fa-trash ml-3" (click) = eliminarTarea(tarea)></i>
                 </li>
             </ul>
         </div>
     </div>
 
-
-   
-
-
-
-</div>
+</div> <!-- end of row -->

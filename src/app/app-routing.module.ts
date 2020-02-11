@@ -11,6 +11,9 @@ import { RecetasComponent} from './paginas/recetas/recetas.component';
 import { Error404Component } from './paginas/error404/error404.component';
 import { SaludarComponent } from './paginas/saludar/saludar.component';
 import { TareasComponent } from './paginas/tareas/tareas.component';
+import { PrivadoComponent } from './paginas/privado/privado.component';
+import { LoginGuard } from './guards/login.guard';
+import { LoginComponent } from './paginas/login/login.component';
 
 
 /**
@@ -29,6 +32,8 @@ const routes: Routes = [
   {path: 'filtros', component:FiltrosComponent},
   {path: 'recetas', component: RecetasComponent},
   {path: 'tareas', component: TareasComponent},
+  {path: 'privado', component: PrivadoComponent, canActivate: [LoginGuard]},
+  {path: 'login', component: LoginComponent},
   /* (:pNombre) los : sirven para indicar que es un parametro */
   {path: 'saludar/:pNombre', component: SaludarComponent},
   {path: '**', component: Error404Component}

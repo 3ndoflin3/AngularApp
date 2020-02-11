@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PruebaComponent } from './componentes/prueba/prueba.component';
@@ -20,6 +20,8 @@ import { Error404Component } from './paginas/error404/error404.component';
 import { SaludarComponent } from './paginas/saludar/saludar.component';
 import { ComparadorComponent } from './paginas/comparador/comparador.component';
 import { TareasComponent } from './paginas/tareas/tareas.component';
+import { PrivadoComponent } from './paginas/privado/privado.component';
+import { LoginComponent } from './paginas/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +40,14 @@ import { TareasComponent } from './paginas/tareas/tareas.component';
     Error404Component,
     SaludarComponent,
     ComparadorComponent,
-    TareasComponent
+    TareasComponent,
+    PrivadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     HttpClientModule, //Modulo para llamadas por HTTP
     FormsModule // Modulo para usar formularios
   ],

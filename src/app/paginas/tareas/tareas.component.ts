@@ -11,11 +11,21 @@ export class TareasComponent implements OnInit {
 
   tareas: Array<Tarea>;
   tituloNuevo: string;
+  modoEdicion: boolean;
+
+  //mensajes
+  mensaje: string;
+  showMensaje: boolean;
 
   constructor(private servicioTarea: TareasService) { 
     console.trace('constructor tareas');
     this.tituloNuevo = '';
     this.tareas = []; //Inicializar el array
+    this.modoEdicion = false;
+
+    //mensaje
+    this.mensaje = '';
+    this.showMensaje = false;
   }/* constructor */
 
   ngOnInit() {
@@ -68,6 +78,11 @@ export class TareasComponent implements OnInit {
   }/* nuevaTarea */
 
 
+  cambiarTitulo(tarea: Tarea): void {
+    console.debug('loose focus para cambiar titulo %o', tarea);
+    this.servicioTarea.modificar(tarea).subscribe( () => this.cargarTareas() );
+
+  }// cambiarTitulo
 
   focusIn(): void{
     console.trace('FOCUS ENTERED');

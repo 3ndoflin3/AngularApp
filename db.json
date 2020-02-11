@@ -2,65 +2,65 @@
   "tareas": [
     {
       "id": 1,
-      "titulo": "Crear Datos en json",
-      "completada": false
+      "titulo": "Entenderlo, depurar haber si lo cambia",
+      "completada": true
     },
     {
       "id": 2,
-      "titulo": "Crear Modelo con interfaz",
-      "completada": false
+      "titulo": "Mejorar UI, mostrando mensajes",
+      "completada": true
     },
     {
       "id": 3,
-      "titulo": "Tomar Cafe y descanso a las 10:30",
-      "completada": false
-    },
-    {
-      "id": 4,
-      "titulo": "eqweqwe",
-      "completada": false
+      "titulo": "El eliminar mostrar al usuario ID y titulo de la tarea eliminada",
+      "completada": true
     },
     {
       "id": 5,
-      "titulo": "adfsfsfsfg",
-      "completada": false
-    }
-  ],
-  "productos": [
-    {
-      "id": 1,
-      "nombre": "AK47"
-    },
-    {
-      "id": 2,
-      "nombre": "PPSH-41"
+      "titulo": "comprobar que titulo tarea nueva > 1",
+      "completada": true
     }
   ],
   "colores": [
     {
       "id": 1,
       "nombre": "negro",
-      "hexcode": "#000"
+      "hex": "#000"
     },
     {
       "id": 2,
       "nombre": "blanco",
-      "hexcode": "#FFF"
+      "hex": "#FFF"
     },
     {
       "id": 3,
       "nombre": "azul",
-      "hexcode": "#00F"
+      "hex": "#00F"
     },
     {
       "id": 4,
       "nombre": "rojo",
-      "hexcode": "#F00"
+      "hex": "#F00"
     },
     {
+      "id": 5,
       "nombre": "verde",
-      "hex": "#0F0",
-      "id": 5
+      "hex": "#0F0"
+    },
+    {
+      "nombre": "teal",
+      "hex": "#00FFDD",
+      "id": 6
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "cafe"
+    },
+    {
+      "id": 2,
+      "nombre": "leche"
     }
   ],
   "posts": [
