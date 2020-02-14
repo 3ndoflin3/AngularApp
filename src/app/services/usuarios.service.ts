@@ -7,17 +7,27 @@ import { Usuario } from '../model/usuario';
 })
 export class UsuarioService implements IUsuarioService{
   
+  private storage: any;
+  private usuario: Usuario;
   isLogged: boolean;
-  usuario: Usuario;
+
   constructor() { 
     console.trace('UsuarioService constructor');
     this.isLogged = false;
     this.usuario = undefined;
+    this.storage = window.sessionStorage;
   }/* constructor */
 
 
   estaLogeado(): boolean {
-      throw new Error("Method not implemented.");
+      console.trace('UsuarioService estaLogeado');
+    if(this.storage.getItem('usuarioStorage')){
+      return true;
+    }else{
+      console.trace('Usuario no encontrado');
+      this.storage.removeItem('usuarioStorage');
+    }
+
   }
 
   login(usuario: Usuario): Usuario {
@@ -42,7 +52,7 @@ export class UsuarioService implements IUsuarioService{
     return this.usuario;
   }
 
-  cerrarSesion(idUsuario: number) {
+  cerrarSesion() {
 
     console.trace('UsuarioService cerrarSesion')
     this.isLogged = false;

@@ -38,6 +38,10 @@ export class PokemonRestComponent implements OnInit {
       this.pokemon.nombre = data.name;
       this.pokemon.imagen = data.sprites.front_default;
       //this.pokemon.habilidad = data.abilities[0].ability.name;
+      data.abilities.forEach(element => {
+        console.log(element.ability.name);
+      });
+
       this.pokemon.habilidad = data.abilities[0].ability.name;
       this.pokemon.url = data.abilities[0].ability.url;
       //mapear de JSON a Pokemon usar solo los datos de la clase Pokemon
@@ -47,7 +51,7 @@ export class PokemonRestComponent implements OnInit {
           this.mensaje = data.names.find( el => el.language.name === 'es');
           console.debug('peticion suksesful %o', data);
           console.log(this.mensaje);
-          const habilidadesNames = data.abilities.map( el => el.ability.name);
+          const habilidadesNames = data.ability.map( el => el.ability.name);
           console.debug('Habilidades %o', habilidadesNames);
           //mapear de JSON a Pokemon usar solo los datos de la clase Pokemon
           

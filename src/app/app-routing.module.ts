@@ -14,6 +14,7 @@ import { TareasComponent } from './paginas/tareas/tareas.component';
 import { PrivadoComponent } from './paginas/privado/privado.component';
 import { LoginGuard } from './guards/login.guard';
 import { LoginComponent } from './paginas/login/login.component';
+import { ComprasComponent } from './paginas/compras/compras.component';
 
 
 /**
@@ -36,6 +37,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   /* (:pNombre) los : sirven para indicar que es un parametro */
   {path: 'saludar/:pNombre', component: SaludarComponent},
+  {path: 'componentes', component: ComprasComponent},
+  
   {path: '**', component: Error404Component}
 ];
 
